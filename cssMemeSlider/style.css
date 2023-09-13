@@ -112,6 +112,15 @@ body {
 
 /* Buttons */
 
+.button-wrapper {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .controls-container {
   display: flex;
   gap: 1rem;
@@ -120,6 +129,7 @@ body {
 .radio-button {
   width: 1.25rem;
   height: 1.25rem;
+  cursor: pointer;
 }
 
 /* Slider logic */
