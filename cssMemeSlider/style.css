@@ -58,25 +58,22 @@ body {
 .second-mem,
 .third-mem,
 .fourth-mem {
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* display: none; */
-  transition: 2s;
+  transition: 1s;
   z-index: 0;
-  /* transform: translateX(-110%); */
+  animation-name: fade-out;
 }
 
 .first-mem {
-  transform: translateX(0%);
+  transform: translateX(200%);
 }
 .second-mem {
-  transform: translateX(-100%);
+  transform: translateX(300%);
 }
 .third-mem {
-  transform: translateX(-200%);
+  transform: translateX(400%);
 }
 .fourth-mem {
-  transform: translateX(-300%);
+  transform: translateX(500%);
 }
 
 /* Titles */
@@ -114,35 +111,23 @@ body {
 /* Slider logic */
 
 .slider-container:has(#first-mem:checked) > .images-container > .first-mem {
-  /* opacity: 1;
-  visibility: visible;
-  transform: translateX(0%); */
-  /* display: block; */
   z-index: 1;
+  transform: translateX(-0%);
 }
 
 .slider-container:has(#second-mem:checked) > .images-container > .second-mem {
-  /* opacity: 1;
-  visibility: visible;
-  transform: translateX(0%); */
-  /* display: block; */
   z-index: 1;
+  transform: translateX(-100%);
 }
 
 .slider-container:has(#third-mem:checked) > .images-container > .third-mem {
-  /* opacity: 1;
-  visibility: visible;
-  transform: translateX(0%);
-  /* display: block; */
   z-index: 1;
+  transform: translateX(-200%);
 }
 
 .slider-container:has(#fourth-mem:checked) > .images-container > .fourth-mem {
-  /* opacity: 1;
-  visibility: visible;
-  transform: translateX(0%); */
-  /* display: block; */
   z-index: 1;
+  transform: translateX(-300%);
 }
 
 
