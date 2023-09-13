@@ -60,7 +60,6 @@ body {
 .fourth-mem {
   transition: 1s;
   z-index: 0;
-  animation-name: fade-out;
 }
 
 .first-mem {
@@ -89,11 +88,25 @@ body {
   font-size: 1.5rem;
 }
 
+.first-title,
 .second-title,
 .third-title,
 .fourth-title {
-  opacity: 0;
-  visibility: hidden;
+  transition: 1s;
+  z-index: 0;
+}
+
+.first-title {
+  transform: translateX(200%);
+}
+.second-title {
+  transform: translateX(300%);
+}
+.third-title {
+  transform: translateX(400%);
+}
+.fourth-title {
+  transform: translateX(500%);
 }
 
 /* Buttons */
@@ -109,6 +122,8 @@ body {
 }
 
 /* Slider logic */
+
+/* Images */
 
 .slider-container:has(#first-mem:checked) > .images-container > .first-mem {
   z-index: 1;
@@ -129,6 +144,30 @@ body {
   z-index: 1;
   transform: translateX(-300%);
 }
+
+/* Titles */
+
+.slider-container:has(#first-mem:checked) > .title-controls-container > .title-container > .first-title {
+  z-index: 1;
+  transform: translateX(-0%);
+}
+
+.slider-container:has(#second-mem:checked) > .title-controls-container > .title-container > .second-title {
+  z-index: 1;
+  transform: translateX(-100%);
+}
+
+.slider-container:has(#third-mem:checked) > .title-controls-container > .title-container > .third-title {
+  z-index: 1;
+  transform: translateX(-200%);
+}
+
+.slider-container:has(#fourth-mem:checked) > .title-controls-container > .title-container > .fourth-title {
+  z-index: 1;
+  transform: translateX(-300%);
+}
+
+
 
 
 
