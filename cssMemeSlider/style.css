@@ -94,19 +94,20 @@ body {
 .fourth-title {
   transition: 1s;
   z-index: 0;
+  opacity: 0;
 }
 
 .first-title {
-  transform: translateX(200%);
+  transform: translateX(0%);
 }
 .second-title {
-  transform: translateX(300%);
+  transform: translateX(-100%);
 }
 .third-title {
-  transform: translateX(400%);
+  transform: translateX(-200%);
 }
 .fourth-title {
-  transform: translateX(500%);
+  transform: translateX(-300%);
 }
 
 /* Buttons */
@@ -149,22 +150,22 @@ body {
 
 .slider-container:has(#first-mem:checked) > .title-controls-container > .title-container > .first-title {
   z-index: 1;
-  transform: translateX(-0%);
+  opacity: 1;
 }
 
 .slider-container:has(#second-mem:checked) > .title-controls-container > .title-container > .second-title {
   z-index: 1;
-  transform: translateX(-100%);
+  opacity: 1;
 }
 
 .slider-container:has(#third-mem:checked) > .title-controls-container > .title-container > .third-title {
   z-index: 1;
-  transform: translateX(-200%);
+  opacity: 1;
 }
 
 .slider-container:has(#fourth-mem:checked) > .title-controls-container > .title-container > .fourth-title {
   z-index: 1;
-  transform: translateX(-300%);
+  opacity: 1;
 }
 
 
