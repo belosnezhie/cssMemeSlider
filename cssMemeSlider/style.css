@@ -21,7 +21,7 @@ body {
   display: flex;
   row-gap: 2.5rem;
   flex-direction: column;
-  background-color: #587896;
+  background-color: rgb(0, 23, 31);
   margin: 0 auto;
   padding: 5% 0%;
 }
@@ -41,11 +41,14 @@ body {
   display: flex;
   background-color: pink;
   overflow: hidden;
+  box-shadow: 0 0 1.3rem 0.7rem #fff;
 }
 
-.image{
+.image {
   min-width: 100%;
-  height: 30rem;
+  /* height: auto; */
+  text-align: center;
+  box-shadow: 0 0 1.3rem 0.7rem #fff;
 }
 
 .image:nth-child(2n+1) {
@@ -77,6 +80,12 @@ body {
   transform: translateX(500%);
 }
 
+.mem {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 /* Titles */
 
 .title-container {
@@ -88,7 +97,10 @@ body {
 .title {
   min-width: 100%;
   font-size: 1.5rem;
-  font: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  color: #FFFFFF;
 }
 
 .first-title,
@@ -142,7 +154,7 @@ body {
   height: 1.25rem;
   z-index: 0;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: #00688D;
 }
 
 .button-wrapper:hover .circle-button {
