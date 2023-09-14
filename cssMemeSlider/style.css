@@ -10,7 +10,7 @@ body {
 
 .body-wrapper {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
   background-color: #DCE8F3;
   margin: 0 auto;
 }
@@ -36,7 +36,9 @@ body {
 /* Images */
 
 .images-container {
-  width: 90%;
+  max-width: 90%;
+  min-width: 33.5rem;
+  min-height: 29.3rem;
   margin: 0 auto;
   display: flex;
   background-color: pink;
@@ -46,7 +48,6 @@ body {
 
 .image {
   min-width: 100%;
-  /* height: auto; */
   text-align: center;
   box-shadow: 0 0 1.3rem 0.7rem #fff;
 }
