@@ -57,21 +57,15 @@ body {
 .image {
   min-width: 100%;
   text-align: center;
+  background-color: #fff;
   box-shadow: 0 0 1.3rem 0.7rem #fff;
-}
-
-.image:nth-child(2n+1) {
-  background-color: blueviolet;
-}
-
-.image:nth-child(2n) {
-  background-color: blue;
 }
 
 .first-mem,
 .second-mem,
 .third-mem,
-.fourth-mem {
+.fourth-mem,
+.fifth-mem {
   transition: 1s;
   z-index: 0;
 }
@@ -88,11 +82,18 @@ body {
 .fourth-mem {
   transform: translateX(500%);
 }
+.fifth-mem {
+  transform: translateX(600%);
+}
 
 .mem {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.fifth-mem > img {
+  width: 90%;
 }
 
 /* Titles */
@@ -115,7 +116,8 @@ body {
 .first-title,
 .second-title,
 .third-title,
-.fourth-title {
+.fourth-title,
+.fifth-title {
   transition: 1s;
   z-index: 0;
   opacity: 0;
@@ -132,6 +134,9 @@ body {
 }
 .fourth-title {
   transform: translateX(-300%);
+}
+.fifth-title {
+  transform: translateX(-400%);
 }
 
 /* Buttons */
@@ -154,7 +159,7 @@ body {
   width: 1.25rem;
   height: 1.25rem;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
   opacity: 0;
   accent-color: #0093C8;
 }
@@ -165,6 +170,18 @@ body {
   z-index: 0;
   border-radius: 50%;
   background-color: #E2E8EB;
+  display: flex;
+}
+
+.active-circle-button {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  z-index: 1;
+  visibility: hidden;
+  border: 0.2rem solid #E2E8EB;
+  border-radius: 50%;
+  background-color: rgb(0, 23, 31);
 }
 
 .button-wrapper:hover .circle-button {
@@ -172,11 +189,18 @@ body {
   transition: 0.2s;
 }
 
-.radio-button:checked {
-  opacity: 1;
-  transition: 0.2s;
+.button-wrapper:has(.radio-button:checked):hover .circle-button {
+  box-shadow: none;
 }
 
+.button-wrapper:has(.radio-button:checked):hover .active-circle-button {
+  border: 0.2rem solid #F2FDBC;
+  box-shadow: 0 0 0.1rem 0.1rem #F2FDBC;
+}
+
+.button-wrapper:has(.radio-button:checked) .active-circle-button {
+  visibility: visible;
+}
 
 /* Slider logic */
 
@@ -185,25 +209,26 @@ body {
 .slider-container:has(#first-mem:checked) > .images-container > .first-mem {
   z-index: 1;
   transform: translateX(-0%);
-  /* display: block; */
 }
 
 .slider-container:has(#second-mem:checked) > .images-container > .second-mem {
   z-index: 1;
   transform: translateX(-100%);
-  /* display: block; */
 }
 
 .slider-container:has(#third-mem:checked) > .images-container > .third-mem {
   z-index: 1;
   transform: translateX(-200%);
-  /* display: block; */
 }
 
 .slider-container:has(#fourth-mem:checked) > .images-container > .fourth-mem {
   z-index: 1;
   transform: translateX(-300%);
-  /* display: block; */
+}
+
+.slider-container:has(#fifth-mem:checked) > .images-container > .fifth-mem {
+  z-index: 1;
+  transform: translateX(-400%);
 }
 
 /* Titles */
@@ -228,6 +253,10 @@ body {
   opacity: 1;
 }
 
+.slider-container:has(#fifth-mem:checked) > .title-controls-container > .title-container > .fifth-title {
+  z-index: 1;
+  opacity: 1;
+}
 
 
 
