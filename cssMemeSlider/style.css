@@ -154,7 +154,7 @@ body {
   cursor: pointer;
   z-index: 2;
   opacity: 0;
-  accent-color: #0093C8;
+  /* background-color: transparent; */
 }
 
 .circle-button {
@@ -179,6 +179,22 @@ body {
 
 .button-wrapper:has(.radio-button:checked) .active-circle-button {
   visibility: visible;
+}
+
+.button-wrapper:active .circle-button {
+  background-color: #8E8E8E;
+}
+
+.button-wrapper:has(.radio-button:checked):active .active-circle-button {
+  background-color: white;
+}
+
+.active-circle-button:active {
+  background-color: #eff8c3 !important;
+}
+
+.circle-button:active {
+  background-color: #E3F1FF !important;
 }
 
 /* Slider logic */
@@ -256,7 +272,7 @@ body {
 @media (hover :hover) {
   .button-wrapper:hover .circle-button {
     box-shadow: 0 0 0.3rem 0.5rem #fff;
-    transition: 0.2s;
+    transition: 0.01s;
   }
   
   .button-wrapper:has(.radio-button:checked):hover .circle-button {
@@ -264,7 +280,7 @@ body {
   }
   
   .button-wrapper:has(.radio-button:checked):hover .active-circle-button {
-    border: 0.2rem solid #eff8c3;
+    border: 0.2rem solid #F2FDBC;
     box-shadow: 0 0 0.1rem 0.1rem #eff8c3;
   }
 }
